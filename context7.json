@@ -1,5 +1,7 @@
 {
   "$schema": "https://context7.com/schema/context7.json",
+  "url": "https://context7.com/netease-kit/nemeeting_doc_source",
+  "public_key": "pk_Scmz3s7Jwm3QjyVBrqHUI",
   "projectTitle": "网易会议 SDK 文档",
   "description": "网易会议多平台（Android/iOS/Web/Windows/macOS/Linux/Electron/H5）SDK 开发文档，包含快速开始、会议管理、会议安全、界面定制等完整功能模块",
   "folders": [
