@@ -8,22 +8,65 @@ Welcome to the NEMeeting SDK documentation. This repository contains comprehensi
 
 Complete integration guides, tutorials, and best practices for all supported platforms:
 
-- **Android** - Mobile Android integration
-- **iOS** - Mobile iOS integration
-- **Web** - Web browser integration
-- **H5** - Mobile H5 integration
-- **Windows** - Windows desktop integration
-- **macOS** - macOS desktop integration
-- **Linux** - Linux platform integration
-- **Electron** - Cross-platform desktop apps
+- **Android** - Mobile Android integration (`guides/Android/`)
+- **iOS** - Mobile iOS integration (`guides/iOS/`)
+- **Web** - Web browser integration (`guides/Web/`)
+- **H5** - Mobile H5 integration (`guides/H5/`)
+- **Windows** - Windows desktop integration (`guides/Windows/`)
+- **macOS** - macOS desktop integration (`guides/macOS/`)
+- **Linux** - Linux platform integration (`guides/Linux/`)
+- **Electron** - Cross-platform desktop apps (`guides/Electron/`)
 
-Each platform guide includes:
-- **Quick Start** - Download SDK, run demos, basic integration
-- **Meeting Management** - Create, schedule, join meetings, and invitations
-- **Meeting Security** - Watermarks, audio/video controls, media encryption
-- **UI Customization** - Theme settings, custom menus, UI components
-- **Advanced Features** - Beauty filters, virtual backgrounds, meeting extensions, IM integration
-- **Troubleshooting** - FAQs and common issues
+Each platform guide follows a consistent structure:
+
+#### Directory Structure
+```
+guides/[Platform]/
+├── 快速开始/              # Quick Start
+│   ├── 快速跑通 Sample Code.md
+│   ├── 集成并初始化 SDK.md
+│   └── 登录鉴权.md
+├── 会议管理/              # Meeting Management
+│   ├── 创建会议.md
+│   ├── 加入会议.md
+│   ├── 预约会议.md
+│   ├── 邀请入会.md
+│   ├── 会议管理.md
+│   └── 会议状态变更流程.md
+├── 会议安全/              # Meeting Security
+│   ├── 概述.md
+│   ├── 会中水印.md
+│   ├── 入会音视频状态控制.md
+│   └── 媒体流加密.md (或 流媒体加密.md for iOS)
+├── 界面定制/              # UI Customization
+│   ├── 概述.md
+│   ├── 设置语言&主题.md
+│   ├── 自定义菜单.md
+│   └── 其他界面定制.md (或 其他界面设置.md for Web)
+├── 基础美颜.md            # Beauty Filters
+├── 虚拟背景.md            # Virtual Backgrounds
+├── 会议扩展性.md          # Meeting Extensions
+├── 复用 IM 账号.md        # IM Account Integration (Android/iOS/H5/Web)
+├── 私有云配置.md          # Private Cloud Configuration
+├── 屏幕共享.md            # Screen Sharing (iOS only)
+├── 会议巡检.md            # Meeting Inspection (Web only)
+├── 常见问题/              # Troubleshooting
+│   ├── 会议安全.md
+│   ├── 依赖冲突.md (Android/iOS)
+│   ├── 功能版本对照.md (Android/iOS/Electron)
+│   └── 集成编译打包.md (Electron)
+├── 更新日志.md            # Changelog
+└── 集成概述.md            # Integration Overview
+```
+
+#### Platform-Specific Notes
+- **iOS**: Uses `流媒体加密.md` instead of `媒体流加密.md`, includes `屏幕共享.md`
+- **Web**: Uses `其他界面设置.md` instead of `其他界面定制.md`, includes `会议巡检.md`
+- **H5**: Uses `集成并初始化SDK.md` (no space) instead of `集成并初始化 SDK.md`
+- **Android/iOS/H5/Web**: Include `复用 IM 账号.md`
+- **Android/iOS**: Include `依赖冲突.md` in 常见问题
+- **Android/iOS/Electron**: Include `功能版本对照.md` in 常见问题
+- **Electron**: Includes `集成编译打包.md` in 常见问题
 
 ### API Reference (`/api-reference`)
 
@@ -73,26 +116,47 @@ Each platform guide includes:
   - Scheduled meetings and instant meetings
   - Meeting controls and participant management
 
-### Security Features
+### Feature Index with File Paths
 
-- **Watermarks** - Anti-recording watermark protection
-- **Media Encryption** - End-to-end encrypted transmission
-- **Meeting Controls** - Audio/video state control, meeting lock
+#### Quick Start & Integration
+- **快速跑通 Sample Code** - `guides/[Platform]/快速开始/快速跑通 Sample Code.md`
+- **集成并初始化 SDK** - `guides/[Platform]/快速开始/集成并初始化 SDK.md` (或 `集成并初始化SDK.md` for H5)
+- **登录鉴权** - `guides/[Platform]/快速开始/登录鉴权.md`
+- **集成概述** - `guides/[Platform]/集成概述.md`
 
-### UI Customization
+#### Meeting Management (会议管理)
+- **创建会议** - `guides/[Platform]/会议管理/创建会议.md`
+- **加入会议** - `guides/[Platform]/会议管理/加入会议.md`
+- **预约会议** - `guides/[Platform]/会议管理/预约会议.md`
+- **邀请入会** - `guides/[Platform]/会议管理/邀请入会.md`
+- **会议管理** - `guides/[Platform]/会议管理/会议管理.md` (离开/结束会议、成员加入或离开会议、会议设置)
+- **会议状态变更流程** - `guides/[Platform]/会议管理/会议状态变更流程.md`
 
-- **Theme Settings** - Dark/light theme switching
-- **Language Support** - Multi-language localization
-- **Custom Menus** - Meeting toolbar customization
-- **UI Components** - Customizable interface elements
+#### Meeting Security (会议安全)
+- **会中水印** - `guides/[Platform]/会议安全/会中水印.md`
+- **入会音视频状态控制** - `guides/[Platform]/会议安全/入会音视频状态控制.md`
+- **媒体流加密** - `guides/[Platform]/会议安全/媒体流加密.md` (或 `流媒体加密.md` for iOS)
+- **概述** - `guides/[Platform]/会议安全/概述.md`
 
-### Advanced Features
+#### UI Customization (界面定制)
+- **设置语言&主题** - `guides/[Platform]/界面定制/设置语言&主题.md` (切换主题色、设置语言)
+- **自定义菜单** - `guides/[Platform]/界面定制/自定义菜单.md`
+- **其他界面定制** - `guides/[Platform]/界面定制/其他界面定制.md` (或 `其他界面设置.md` for Web)
+- **概述** - `guides/[Platform]/界面定制/概述.md`
 
-- **Beauty Filters** - Basic beauty effects
-- **Virtual Backgrounds** - Custom meeting backgrounds
-- **Meeting Extensions** - Plugin and extension capabilities
-- **IM Integration** - Reuse existing IM account systems
-- **Private Cloud** - Support for private deployment
+#### Advanced Features
+- **基础美颜** - `guides/[Platform]/基础美颜.md`
+- **虚拟背景** - `guides/[Platform]/虚拟背景.md`
+- **会议扩展性** - `guides/[Platform]/会议扩展性.md`
+- **复用 IM 账号** - `guides/[Platform]/复用 IM 账号.md` (Android/iOS/H5/Web)
+- **私有云配置** - `guides/[Platform]/私有云配置.md`
+- **屏幕共享** - `guides/iOS/屏幕共享.md` (iOS only)
+- **会议巡检** - `guides/Web/会议巡检.md` (Web only)
+
+#### Troubleshooting & Reference
+- **常见问题** - `guides/[Platform]/常见问题/` (会议安全、依赖冲突、功能版本对照、集成编译打包等)
+- **更新日志** - `guides/[Platform]/更新日志.md`
+- **API Reference** - `api-reference/README.md`
 
 ## Support
 
