@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:context7.com)",
+      "WebSearch",
+      "Bash(done)",
+      "Bash(cat:*)",
+      "Bash(tree:*)",
+      "Bash(for dir in Android iOS Web Windows macOS Linux Electron H5)",
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git checkout:*)",
+      "Bash(git tag:*)",
+      "Bash(git push:*)",
+      "Bash(mkdir:*)",
+      "Bash(do mv \"$dir\" guides/)"
+    ]
+  }
+}
