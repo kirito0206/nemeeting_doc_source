@@ -2,7 +2,10 @@
   "$schema": "https://context7.com/schema/context7.json",
   "projectTitle": "NEMeeting SDK",
   "description": "NetEase Meeting SDK - Comprehensive guides for integrating video conferencing capabilities into your applications across multiple platforms (Android/iOS/Web/H5/Windows/macOS/Linux/Electron)",
-  "folders": [],
+  "folders": [
+    "guides/",
+    "api-reference/"
+  ],
   "excludeFolders": [
     ".claude",
     "node_modules",
